@@ -1,0 +1,80 @@
+Starting at 22:57.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+Finished at 22:57.
+Starting at 09:12.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_04/snakemake/190910_091446.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 21:12.
+Starting at 21:27.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+Starting at 10:31.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_04/snakemake/190916_103308.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 19:09.
+Starting at 09:57.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_04/snakemake/190917_095947.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 10:02.
+Starting at 14:37.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_04/snakemake/190917_144045.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 14:46.
+Starting at 09:11.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+Finished at 09:12.
+Starting at 09:28.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Finished at 09:29.
+Starting at 09:59.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_04/snakemake/190918_100111.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 01:49.
+Starting at 16:21.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Finished at 16:22.
+Starting at 16:25.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_04
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_04/snakemake/190919_162639.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 17:32.

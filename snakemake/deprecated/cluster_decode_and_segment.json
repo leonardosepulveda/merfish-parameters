@@ -1,0 +1,80 @@
+{
+    "__default__" : {
+        "account" : "zhuang_lab",
+        "time" : "14:00:00",
+        "n" : 1,
+        "partition" : "zhuang,shared",
+        "mem" : 10000,
+        "exclude" : "holyzhuang01",
+        "out" : "~/Scratch/%j.stdout.txt",
+        "err" : "~/Scratch/%j.stderr.txt"
+    },
+    "deconvolve" : {
+        "time" : "3:30:00",
+        "mem" : 3000
+    },
+    "warp" : {
+        "time" : "25:00",
+        "mem" : 3000
+    },
+    "DAPI_mosaic" : {
+        "time" : "4:00:00",
+        "mem" : 10000
+    },
+    "stain_mosaic" : {
+        "time" : "20:00:00",
+        "mem" : 10000
+    },
+    "decode" : {
+        "time" : "60:00:00",
+        "mem" : 8000
+    },
+    "decode_10" : {
+        "time" : "30:00:00",
+        "mem" : 30000
+    },
+    "decode_relaxed_distance" : {
+        "time" : "48:00:00",
+        "mem" : 30000
+    },
+    "performance" : {
+        "time" : "40:00:00",
+        "mem" : 200000
+    },
+    "performance_relaxed" : {
+        "time" : "5:00:00",
+        "mem" : 100000
+    },
+    "performance_adaptive" : {
+        "time" : "5:00:00",
+        "mem" : 100000
+    },
+    "export" : {
+        "time" : "2:00:00",
+        "mem" : 50000
+    },
+    "filter" : {
+        "time" : "30:00",
+        "mem": 20000
+    },
+    "filter_relaxed" : {
+        "time" : "30:00",
+        "mem": 20000
+    },
+    "filter_relaxed2" : {
+        "time" : "30:00",
+        "mem": 20000
+    },
+    "filter_relaxed3" : {
+        "time" : "30:00",
+        "mem": 20000
+    },
+    "filter_adaptive" : {
+        "time" : "2:00:00",
+        "mem": 15000
+    },
+    "segment" : {
+        "time" : "6:00:00",
+        "mem": 5000
+    }
+}

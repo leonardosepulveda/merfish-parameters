@@ -1,0 +1,89 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "FiducialCorrelationWarp",
+            "module": "merlin.analysis.warp"
+        },
+        {
+            "task": "DeconvolutionPreprocess",
+            "module": "merlin.analysis.preprocess",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp"
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize1",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "fov_per_iteration": 2,
+                "iteration_count": 2,
+                "optimize_chromatic_correction": false
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize2",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "fov_per_iteration": 2,
+                "iteration_count": 2,
+                "optimize_chromatic_correction": false,
+                "previous_iteration": "Optimize1"
+            }
+        },
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize2",
+                "global_align_task": "SimpleGlobalAlignment",
+                "crop_width": 10
+            }
+        },
+        {
+            "task": "SimpleGlobalAlignment",
+            "module": "merlin.analysis.globalalign"
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp"
+            }
+        },
+        {
+            "task": "FilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "StrictFilterBarcodes",
+            "parameters": {
+                "decode_task": "Decode",
+                "area_threshold": 5,
+                "intensity_threshold": 1
+            }
+        },
+        {
+            "task": "WatershedSegment",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "global_align_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "StrictExportBarcodes",
+            "parameters": {
+                "filter_task": "StrictFilterBarcodes"
+            }
+        }
+    ]
+
+}

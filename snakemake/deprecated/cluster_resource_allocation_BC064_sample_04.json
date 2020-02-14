@@ -1,0 +1,84 @@
+{
+    "__default__" : {
+        "account" : "zhuang_lab",
+        "time" : "24:00:00",
+        "n" : 1,
+        "partition" : "zhuang,shared",
+        "mem" : 10000,
+        "exclude" : "holyzhuang01",
+        "out" : "~/Scratch/%j.stdout.txt",
+        "err" : "~/Scratch/%j.stderr.txt"
+    },
+    "AsignCellFOV" : {
+        "mem" : 1000
+    },
+    "DAPI_mosaic" : {
+        "mem" : 1000
+    },
+    "Decode" : {
+        "mem" : 4000
+    },
+    "DeconvolutionPreprocess" : {
+        "mem" : 1000
+    },
+    "ExportBarcodes" : {
+        "mem" : 5000
+    },
+    "ExportCellMetadata" : {
+        "mem" : 1000
+    },
+    "ExportPartitionedBarcodes" : {
+        "mem" : 1000
+    },
+    "ExportSumSignals" : {
+        "mem" : 1000
+    },
+    "FiducialCorrelationWarp" : {
+        "mem" : 1000
+    },
+    "FilterBarcodes" : {
+        "mem" : 3000
+    },  
+    "Optimize1" : {
+        "mem" : 3000
+    },
+    "Optimize2" : {
+        "mem" : 3000
+    },
+    "Optimize3" : {
+        "mem" : 20000
+    },
+    "Optimize4" : {
+        "mem" : 5000
+    },
+    "Optimize5" : {
+        "mem" : 5000
+    },
+    "Optimize6" : {
+        "mem" : 5000
+    },
+    "Optimize7" : {
+        "mem" : 10000
+    },
+    "Optimize8" : {
+        "mem" : 10000
+    },
+    "Optimize9" : {
+        "mem" : 10000
+    },
+    "Optimize10" : {
+        "mem" : 5000
+    },
+    "PartitionBarcodes" : {
+        "mem" : 3000
+    },
+    "PlotPerformance" : {
+        "mem" : 50000
+    },
+    "WatershedSegment" : {
+        "mem" : 3000
+    },
+    "SumSignals" : {
+        "mem" : 3000
+    }
+}

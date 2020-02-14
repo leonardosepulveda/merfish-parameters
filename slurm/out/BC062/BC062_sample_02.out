@@ -1,0 +1,43 @@
+Starting at 18:04.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC062_sample_02
+MERlin - the MERFISH decoding pipeline
+['C1E1_codebook.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC062_sample_02.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190719_BC062_MERFISH/sample_02/snakemake/190905_180706.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 19:15.
+Starting at 18:19.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC062_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC062.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190719_BC062_MERFISH/sample_02/snakemake/190909_182249.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 09:35.
+Starting at 09:11.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC062_sample_02
+Finished at 09:12.
+Starting at 09:28.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC062_sample_02
+Starting at 09:59.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC062_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC062.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190719_BC062_MERFISH/sample_02/snakemake/190918_100046.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 01:28.
+Starting at 16:18.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC062_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC062.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190719_BC062_MERFISH/sample_02/snakemake/190919_161954.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 16:47.

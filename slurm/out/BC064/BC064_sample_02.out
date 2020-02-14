@@ -1,0 +1,48 @@
+Starting at 22:56.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+Starting at 22:25.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_02/snakemake/190913_222842.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 05:48.
+Starting at 09:11.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+Finished at 09:12.
+Starting at 09:28.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Finished at 09:29.
+Starting at 09:59.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_02/snakemake/190918_100108.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 01:28.
+Starting at 16:21.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Finished at 16:22.
+Starting at 16:25.
+/n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python
+BC064_sample_02
+MERlin - the MERFISH decoding pipeline
+['J4E1_codebook_refseq.csv']
+Generating analysis tasks from /n/home06/lsepulvedaduran/Software/merfish-parameters/analysis/merlin_analysis_BC064.json
+Snakefile generated at /n/scratchlfs/zhuang_lab/lsepulveda/190812_BC064_MERFISH/sample_02/snakemake/190919_162619.Snakefile
+Running MERlin pipeline through snakemake
+Finished at 16:50.
