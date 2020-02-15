@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -n 1
 #SBATCH -N 1
-#SBATCH -t 5000
+#SBATCH -t 7-00:00:00
 #SBATCH --mem 2000
 #SBATCH --open-mode=append
 #SBATCH -o /home/leonardosepulveda/merfish-parameters/slurm/out/BC071_sample_01_gcloud.out
@@ -9,7 +9,7 @@
 
 date +'Starting at %R.'
 
-echo BC071_sample_01
+source activate merlin_env
 
 merlin -k snakemake_parameters_gcloud.json \
        -a merlin_analysis_BC071_gcloud.json \
