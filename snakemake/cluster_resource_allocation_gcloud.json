@@ -1,0 +1,106 @@
+{
+    "__default__" : {
+        "time" : "24:00:00",
+        "n" : 1,
+        "mem" : 10000,
+        "out" : "~/Scratch/%j.stdout.txt",
+        "err" : "~/Scratch/%j.stderr.txt"
+    },
+    "AdaptiveFilterBarcodes" : {
+        "mem" : 4000
+    },
+    "AsignCellFOV" : {
+        "mem" : 1000
+    },
+    "CleanCellBoundaries" : {
+        "mem" : 4000
+    },
+    "CombineCleanedBoundaries" : {
+        "mem" : 4000
+    },
+    "mosaic_DAPI" : {
+        "mem" : 20000
+    },
+    "mosaic_polyT" : {
+        "mem" : 20000
+    },
+    "mosaic_Lectins" : {
+        "mem" : 20000
+    },
+    "mosaic_bits" : {
+        "mem" : 20000
+    },
+    "Decode" : {
+        "mem" : 4000
+    },
+    "DeconvolutionPreprocess" : {
+        "mem" : 1000
+    },
+    "ExportBarcodes" : {
+        "mem" : 50000
+    },
+    "ExportCellMetadata" : {
+        "mem" : 10000
+    },
+    "ExportPartitionedBarcodes" : {
+        "mem" : 10000
+    },
+    "ExportSumSignals" : {
+        "mem" : 10000
+    },
+    "FiducialCorrelationWarp" : {
+        "mem" : 1000
+    },
+    "FilterBarcodes" : {
+        "mem" : 10000
+    },
+    "GenerateAdaptiveThreshold" : {
+        "mem" : 30000
+    },  
+    "Optimize1" : {
+        "mem" : 3000
+    },
+    "Optimize2" : {
+        "mem" : 3000
+    },
+    "Optimize3" : {
+        "mem" : 20000
+    },
+    "Optimize4" : {
+        "mem" : 5000
+    },
+    "Optimize5" : {
+        "mem" : 5000
+    },
+    "Optimize6" : {
+        "mem" : 5000
+    },
+    "Optimize7" : {
+        "mem" : 10000
+    },
+    "Optimize8" : {
+        "mem" : 10000
+    },
+    "Optimize9" : {
+        "mem" : 10000
+    },
+    "Optimize10" : {
+        "mem" : 5000
+    },
+    "PartitionBarcodes" : {
+        "mem" : 3000
+    },
+    "PlotPerformance" : {
+        "mem" : 50000
+    },
+    "RefineCellDatabases" : {
+        "mem" : 4000
+    },
+    "SumSignals" : {
+        "mem" : 3000
+    },
+    "WatershedSegment" : {
+        "mem" : 3000
+    }
+    
+}
