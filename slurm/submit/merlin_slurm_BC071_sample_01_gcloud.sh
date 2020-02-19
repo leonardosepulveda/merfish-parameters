@@ -4,8 +4,8 @@
 #SBATCH -t 7-00:00:00
 #SBATCH --mem 2000
 #SBATCH --open-mode=append
-#SBATCH -o /home/leonardosepulveda/merfish-parameters/slurm/out/BC071_sample_01_gcloud.out
-#SBATCH -e /home/leonardosepulveda/merfish-parameters/slurm/err/BC071_sample_01_gcloud.err
+#SBATCH -o /home/lsepulvedaduran_g_harvard_edu/merfish-parameters/slurm/out/BC071_sample_01_gcloud.out
+#SBATCH -e /home/lsepulvedaduran_g_harvard_edu/merfish-parameters/slurm/err/BC071_sample_01_gcloud.err
 
 date +'Starting at %R.'
 
