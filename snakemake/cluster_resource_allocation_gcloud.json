@@ -7,55 +7,55 @@
         "err" : "~/Scratch/%j.stderr.txt"
     },
     "AdaptiveFilterBarcodes" : {
-        "mem" : 4000
+        "mem" : 5000
     },
     "AsignCellFOV" : {
-        "mem" : 1000
+        "mem" : 2000
     },
     "CleanCellBoundaries" : {
-        "mem" : 4000
+        "mem" : 5000
     },
     "CombineCleanedBoundaries" : {
-        "mem" : 4000
+        "mem" : 5000
     },
     "mosaic_DAPI" : {
-        "mem" : 20000
+        "mem" : 30000
     },
     "mosaic_polyT" : {
-        "mem" : 20000
+        "mem" : 30000
     },
     "mosaic_Lectins" : {
-        "mem" : 20000
+        "mem" : 30000
     },
     "mosaic_bits" : {
-        "mem" : 20000
+        "mem" : 30000
     },
     "Decode" : {
-        "mem" : 4000
+        "mem" : 1000
     },
     "DeconvolutionPreprocess" : {
         "mem" : 1000
     },
     "ExportBarcodes" : {
-        "mem" : 50000
+        "mem" : 60000
     },
     "ExportCellMetadata" : {
-        "mem" : 10000
+        "mem" : 20000
     },
     "ExportPartitionedBarcodes" : {
-        "mem" : 10000
+        "mem" : 15000
     },
     "ExportSumSignals" : {
-        "mem" : 10000
+        "mem" : 15000
     },
     "FiducialCorrelationWarp" : {
         "mem" : 1000
     },
     "FilterBarcodes" : {
-        "mem" : 10000
+        "mem" : 15000
     },
     "GenerateAdaptiveThreshold" : {
-        "mem" : 30000
+        "mem" : 35000
     },  
     "Optimize1" : {
         "mem" : 3000
@@ -64,16 +64,16 @@
         "mem" : 3000
     },
     "Optimize3" : {
-        "mem" : 20000
+        "mem" : 25000
     },
     "Optimize4" : {
-        "mem" : 5000
+        "mem" : 10000
     },
     "Optimize5" : {
-        "mem" : 5000
+        "mem" : 10000
     },
     "Optimize6" : {
-        "mem" : 5000
+        "mem" : 10000
     },
     "Optimize7" : {
         "mem" : 10000
@@ -85,16 +85,16 @@
         "mem" : 10000
     },
     "Optimize10" : {
-        "mem" : 5000
+        "mem" : 10000
     },
     "PartitionBarcodes" : {
-        "mem" : 3000
+        "mem" : 5000
     },
     "PlotPerformance" : {
         "mem" : 50000
     },
     "RefineCellDatabases" : {
-        "mem" : 4000
+        "mem" : 5000
     },
     "SumSignals" : {
         "mem" : 3000
