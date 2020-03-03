@@ -1,7 +1,7 @@
 {
 "cluster": "sbatch --mem={cluster.mem} -c 1 -n {cluster.n}  -t {cluster.time} -o {cluster.out} -e {cluster.err} ",
     "cluster_config": "/home/lsepulvedaduran_g_harvard_edu/merfish-parameters/snakemake/cluster_resource_allocation_gcloud.json",
-    "nodes": 1000,
-    "latency_wait": 120,
-    "restart_times": 2
+    "nodes": 2000,
+    "latency_wait": 300,
+    "restart_times": 5
 }
