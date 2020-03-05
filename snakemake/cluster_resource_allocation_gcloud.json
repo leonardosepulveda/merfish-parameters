@@ -31,7 +31,7 @@
         "mem" : 30000
     },
     "Decode" : {
-        "mem" : 1000
+        "mem" : 5000
     },
     "DeconvolutionPreprocess" : {
         "mem" : 1000
