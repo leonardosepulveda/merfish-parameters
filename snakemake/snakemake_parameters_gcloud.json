@@ -3,5 +3,5 @@
     "cluster_config": "/home/lsepulvedaduran_g_harvard_edu/merfish-parameters/snakemake/cluster_resource_allocation_gcloud.json",
     "nodes": 2000,
     "latency_wait": 300,
-    "restart_times": 5
+    "restart_times": 2
 }
