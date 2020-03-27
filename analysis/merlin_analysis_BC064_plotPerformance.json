@@ -1,0 +1,14 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "PlotPerformance",
+            "module": "merlin.analysis.plotperformance",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "decode_task": "Decode",
+                "filter_task": "AdaptiveFilterBarcodes"
+            }
+        }
+    ]
+}
