@@ -15,7 +15,7 @@
             "module": "merlin.analysis.segment",
             "analysis_name": "CleanCellBoundariesCellpose",
             "parameters": {
-                "segment_task": "WatershedSegmentNucleiCV2",
+                "segment_task": "MachineLearningSegment",
                 "global_align_task": "SimpleGlobalAlignment"
             }
         },
@@ -32,7 +32,7 @@
             "module": "merlin.analysis.segment",
             "analysis_name": "RefineCellDatabasesCellpose",
             "parameters": {
-                "segment_task": "WatershedSegmentNucleiCV2",
+                "segment_task": "MachineLearningSegment",
                 "combine_cleaning_task": "CombineCleanedBoundaries"
             }
         },

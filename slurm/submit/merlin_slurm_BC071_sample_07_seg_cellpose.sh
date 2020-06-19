@@ -5,8 +5,8 @@
 #SBATCH -t 7-00:00:00
 #SBATCH --mem 4000
 #SBATCH --open-mode=append
-#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_07_seg_cv2.out
-#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_07_seg_cv2.err
+#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_07_seg_cellpose.out
+#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_07_seg_cellpose.err
 
 date +'Starting at %R.'
 
