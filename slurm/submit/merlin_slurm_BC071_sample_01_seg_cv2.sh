@@ -18,7 +18,7 @@ module load fftw
 which python
 echo BC071_sample_01
 
-merlin -k snakemake_parameters_BC071.json \
+merlin -k parameters_BC071_seg_cv2.json \
        -a merlin_analysis_BC071_seg_cv2.json \
        -o data_organization_BC071.csv \
        -p positions_BC071_sample_01.txt \

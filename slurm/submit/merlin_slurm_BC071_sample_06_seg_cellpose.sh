@@ -5,8 +5,8 @@
 #SBATCH -t 7-00:00:00
 #SBATCH --mem 4000
 #SBATCH --open-mode=append
-#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_06_seg_cv2.out
-#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_06_seg_cv2.err
+#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_06_seg_cellpose.out
+#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_06_seg_cellpose.err
 
 date +'Starting at %R.'
 
@@ -18,8 +18,8 @@ module load fftw
 which python
 echo BC071_sample_06
 
-merlin -k parameters_BC071_seg_cv2.json \
-       -a merlin_analysis_BC071_seg_cv2.json \
+merlin -k parameters_BC071_seg_cellpose.json \
+       -a merlin_analysis_BC071_seg_cellpose.json \
        -o data_organization_BC071_2.csv \
        -p positions_BC071_sample_06.txt \
        -c C1E1_codebook.csv \
