@@ -24,7 +24,7 @@
             "module": "merlin.analysis.segment",
             "analysis_name": "CombineCleanedBoundariesCellpose",
             "parameters": {
-                "cleaning_task": "CleanCellBoundaries"
+                "cleaning_task": "CleanCellBoundariesCellpose"
             }
         },
         {
@@ -41,7 +41,7 @@
             "module": "merlin.analysis.segment",
             "analysis_name": "ExportCellMetadataCellpose",
             "parameters": {
-                "segment_task": "RefineCellDatabases"
+                "segment_task": "RefineCellDatabasesCellpose"
             }
         },
         {
@@ -50,7 +50,7 @@
             "analysis_name": "PartitionBarcodesCellpose",
             "parameters": {
                 "filter_task": "AdaptiveFilterBarcodes",
-                "assignment_task": "RefineCellDatabases",
+                "assignment_task": "RefineCellDatabasesCellpose",
                 "alignment_task": "SimpleGlobalAlignment"
             }
         },
@@ -59,15 +59,15 @@
             "module": "merlin.analysis.partition",
             "analysis_name": "ExportPartitionedBarcodesCellpose",
             "parameters": {
-                "partition_task": "PartitionBarcodes"
+                "partition_task": "PartitionBarcodesCellpose"
             }
         },
         {
             "task": "SlurmReport",
             "module": "merlin.analysis.slurmreport",
-            "analysis_name": "SlurmReport",
+            "analysis_name": "SlurmReportCellpose",
             "parameters": {
-                "run_after_task": "ExportPartitionedBarcodes"
+                "run_after_task": "ExportPartitionedBarcodesCellpose"
             }
         }    
     ]
