@@ -1,0 +1,68 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "MachineLearningSegment",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeSegmentation",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "global_align_task": "SimpleGlobalAlignment",
+                "method": "cellpose",
+                "diameter": 50,
+                "compartment_channel_name": "DAPI"
+            }
+        },
+        {
+            "task": "CleanCellBoundaries",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeCleanCellBoundaries",
+            "parameters": {
+                "segment_task": "CellposeSegmentation",
+                "global_align_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "CombineCleanedBoundaries",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeCombineCleanedBoundaries",
+            "parameters": {
+                "cleaning_task": "CellposeCleanCellBoundaries"
+            }
+        },
+        {
+            "task": "RefineCellDatabases",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeRefineCellDatabases",
+            "parameters": {
+                "segment_task": "CellposeSegmentation",
+                "combine_cleaning_task": "CellposeCombineCleanedBoundaries"
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "CellposePartitionBarcodesAdaptive",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes",
+                "assignment_task": "CellposeRefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "CellposeExportPartitionedBarcodesAdaptive",
+            "parameters": {
+                "partition_task": "CellposePartitionBarcodesAdaptive"
+            }
+        },
+        {
+            "task": "ExportCellMetadata",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeExportCellMetadata",
+            "parameters": {
+                "segment_task": "CellposeRefineCellDatabases"
+            }
+        }
+    ]
+}

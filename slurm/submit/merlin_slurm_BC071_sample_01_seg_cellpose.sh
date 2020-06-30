@@ -5,8 +5,8 @@
 #SBATCH -t 7-00:00:00
 #SBATCH --mem 4000
 #SBATCH --open-mode=append
-#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_07_seg_cellpose.out
-#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_07_seg_cellpose.err
+#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_01_seg_cellpose.out
+#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_01_seg_cellpose.err
 
 date +'Starting at %R.'
 
@@ -16,15 +16,15 @@ source activate merlin_env
 module load gcc/8.2.0-fasrc01
 module load fftw
 which python
-echo BC071_sample_07
+echo BC071_sample_01
 
 merlin -k parameters_BC071_seg_cellpose.json \
        -a merlin_analysis_BC071_seg_cellpose.json \
-       -o data_organization_BC071_3.csv \
-       -p positions_BC071_sample_07.txt \
+       -o data_organization_BC071.csv \
+       -p positions_BC071_sample_01.txt \
        -c C1E1_codebook.csv \
        -m MERFISH3.json \
        -n 1000 \
-       191212_BC071_MERFISH/sample_07
+       191212_BC071_MERFISH/sample_01
 
 date +'Finished at %R.'
