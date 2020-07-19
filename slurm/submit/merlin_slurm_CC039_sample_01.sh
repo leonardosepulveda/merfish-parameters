@@ -20,7 +20,7 @@ echo CC039_sample_01
 
 merlin -k parameters_CC039.json \
        -a merlin_analysis_BC039.json \
-       -o data_organization_CC039_1.csv \
+       -o data_organization_CC039.csv \
        -p positions_CC039_sample_01.txt \
        -c C1E1_codebook.csv \
        -m MERFISH3.json \
