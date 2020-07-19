@@ -19,7 +19,7 @@ which python
 echo BC071_sample_02
 
 merlin -k parameters_BC071_seg_cellpose.json \
-       -a merlin_analysis_BC071_seg_cellpose.json \
+       -a merlin_analysis_BC071_seg_cellpose_2.json \
        -o data_organization_BC071_3.csv \
        -p positions_BC071_sample_02.txt \
        -c C1E1_codebook.csv \

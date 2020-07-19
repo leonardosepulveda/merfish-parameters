@@ -6,7 +6,7 @@
 #SBATCH --mem 4000
 #SBATCH --open-mode=append
 #SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC071_sample_01_seg_cellpose.out
-#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_01_seg_cellpose.err
+#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC071_sample_01_seg_cellpose_2.err
 
 date +'Starting at %R.'
 
@@ -19,7 +19,7 @@ which python
 echo BC071_sample_01
 
 merlin -k parameters_BC071_seg_cellpose.json \
-       -a merlin_analysis_BC071_seg_cellpose.json \
+       -a merlin_analysis_BC071_seg_cellpose_2.json \
        -o data_organization_BC071.csv \
        -p positions_BC071_sample_01.txt \
        -c C1E1_codebook.csv \
