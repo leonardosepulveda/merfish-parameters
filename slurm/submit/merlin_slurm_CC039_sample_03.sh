@@ -19,10 +19,10 @@ which python
 echo CC039_sample_03
 
 merlin -k parameters_CC039.json \
-       -a merlin_analysis_BC039.json \
-       -o data_organization_CC039_2.csv \
+       -a merlin_analysis_CC039.json \
+       -o data_organization_CC039_1.csv \
        -p positions_CC039_sample_03.txt \
-       -c J4E1_codebook.csv \
+       -c J4E1_codebook_refseq.csv \
        -m MERFISH3.json \
        -n 1000 \
        200706_CC039_MERFISH/sample_03
