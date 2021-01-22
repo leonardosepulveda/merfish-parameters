@@ -40,7 +40,7 @@
         "mem" : 1000
     },
     "ExportBarcodes" : {
-        "mem" : 20000
+        "mem" : 40000
     },
     "ExportCellMetadata" : {
         "mem" : 20000
@@ -103,6 +103,6 @@
         "mem" : 3000
     },
     "CellposeSegmentation" : {
-        "mem" : 3000
+        "mem" : 5000
     }
 }
