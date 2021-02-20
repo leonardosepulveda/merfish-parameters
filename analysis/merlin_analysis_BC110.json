@@ -1,0 +1,56 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "SimpleGlobalAlignment",
+            "module": "merlin.analysis.globalalign"
+        },
+        {
+            "task": "FiducialCorrelationWarp",
+            "module": "merlin.analysis.warp",
+            "parameters": {
+                "write_fiducial_images": true,
+                "highpass_sigma": 10
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_DAPI",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "DAPI",
+                "microns_per_pixel": 1,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_polyT",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "polyT",
+                "microns_per_pixel": 1,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bits",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "microns_per_pixel": 1,
+                "data_channels": ["bit01","bit02","bit03","bit04",
+                                  "bit05","bit06","bit07","bit08",
+                                  "bit09","bit10","bit11","bit12",
+                                  "bit13","bit14","bit15","bit16", 
+                                  "bit17","bit18","bit19","bit20"],
+                "z_index": 3
+            }
+        }
+    ]
+}
