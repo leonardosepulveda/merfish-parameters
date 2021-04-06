@@ -23,8 +23,8 @@ merlin -k parameters_BC114.json \
        -o data_organization_BC114_mosaics.csv \
        -p positions_BC114_sample_01.txt \
        -c C2v6_codebook_mplx_seq.csv \
-       -m MERFISH3.json \
+       -m MERFISH6.json \
        -n 1000 \
-       210303_BC114_data/sample_01
+       210303_BC114/sample_01
 
 date +'Finished at %R.'
