@@ -1,0 +1,549 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "SimpleGlobalAlignment",
+            "module": "merlin.analysis.globalalign"
+        },
+        {
+            "task": "FiducialCorrelationWarp",
+            "module": "merlin.analysis.warp",
+            "parameters": {
+                "write_fiducial_images": true,
+                "highpass_sigma": 10
+            }
+        },
+        {
+            "task": "DeconvolutionPreprocess",
+            "module": "merlin.analysis.preprocess",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "highpass_sigma": 3,
+                "decon_sigma": 2,
+                "decon_iterations": 20,
+                "decon_filter_size": 9 
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize1",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize2",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize1",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize3",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize2",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize4",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize3",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize5",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize4",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize6",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize5",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize7",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize6",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize8",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize7",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize9",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize8",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize10",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize9",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.65
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "parameters": {
+                "decode_task": "Decode",
+                "run_after_task": "Decode"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "parameters": {
+                "misidentification_rate": 0.1,
+                "decode_task": "Decode",
+                "adaptive_task": "GenerateAdaptiveThreshold"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "MachineLearningSegment",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeSegmentation",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "global_align_task": "SimpleGlobalAlignment",
+                "method": "cellpose",
+                "diameter": 50,
+                "compartment_channel_name": "DAPI", 
+                "flow_threshold": 0.5, 
+                "cellprob_threshold": 1
+            }
+        },
+        {
+            "task": "CleanCellBoundaries",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "segment_task": "CellposeSegmentation",
+                "global_align_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "CombineCleanedBoundaries",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "cleaning_task": "CleanCellBoundaries"
+            }
+        },
+        {
+            "task": "RefineCellDatabases",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "segment_task": "CellposeSegmentation",
+                "combine_cleaning_task": "CombineCleanedBoundaries"
+            }
+        },
+        {
+            "task": "ExportCellMetadata",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "segment_task": "RefineCellDatabases"
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "parameters": {
+                "partition_task": "PartitionBarcodes"
+            }
+        },
+        {
+            "task": "SumSignal",
+            "module": "merlin.analysis.sequential",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "segment_task": "CellposeSegmentation",
+                "global_align_task": "SimpleGlobalAlignment",
+                "z_index":3,
+                "apply_highpass": "True",
+                "highpass_sigma":3, 
+                "run_after_task": "ExportPartitionedBarcodes"
+            }
+        },
+        {
+            "task": "ExportSumSignals",
+            "module": "merlin.analysis.sequential",
+            "parameters": {
+                "sequential_task": "SumSignal"
+            }
+        },
+        {
+            "task": "SlurmReport",
+            "module": "merlin.analysis.slurmreport",
+            "analysis_name": "SlurmReport",
+            "parameters": {
+                "run_after_task": "ExportPartitionedBarcodes"
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_DAPI",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "DAPI",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_polyT",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "polyT",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit01",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit01",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit02",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit02",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit03",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit03",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit04",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit04",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit05",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit05",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit06",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit06",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit07",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit07",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit08",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit08",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit09",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit09",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit10",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit10",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit11",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit11",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit12",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit12",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit13",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit13",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit14",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit14",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit15",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit15",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit16",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit16",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit17",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit17",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit18",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit18",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit19",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit19",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bit20",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "bit20",
+                "microns_per_pixel": 10,
+                "z_index": 3
+            }
+        }
+
+    ]
+}
