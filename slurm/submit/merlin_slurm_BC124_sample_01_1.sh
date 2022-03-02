@@ -16,15 +16,15 @@ source activate merlin_env
 module load gcc/8.2.0-fasrc01
 module load fftw
 which python
-echo BC115_sample_04
+echo BC124_sample_01_1
 
 merlin -k parameters_BC124.json \
        -a merlin_analysis_BC124.json \
-       -o data_organization_BC124.csv \
+       -o data_organization_BC124_1.csv \
        -p positions_BC124_sample_01.txt \
        -c C2v6_codebook_mplx.csv \
        -m MERFISH8.json \
        -n 1000 \
-       211008_BC124/sample_01_1
+       211008_BC124_data/sample_01_1
 
 date +'Finished at %R.'
