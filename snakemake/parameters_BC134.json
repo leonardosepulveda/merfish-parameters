@@ -1,0 +1,7 @@
+{
+    "cluster": "sbatch --mem={cluster.mem} -A {cluster.account} -p {cluster.partition} -n {cluster.n}  -t {cluster.time} -o {cluster.out} -e {cluster.err} --exclude={cluster.exclude} ",
+    "cluster_config": "/n/home06/lsepulvedaduran/Software/merfish-parameters/snakemake/cluster_resource_allocation_BC134.json",
+    "nodes": 1000,
+    "latency_wait": 200,
+    "restart_times": 2
+}
