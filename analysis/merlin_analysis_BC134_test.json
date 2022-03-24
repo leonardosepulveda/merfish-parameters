@@ -31,7 +31,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "optimize_chromatic_correction": true
             }
         },
@@ -43,7 +43,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize1",
                 "optimize_chromatic_correction": true
             }
@@ -56,7 +56,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize2",
                 "optimize_chromatic_correction": true
             }
@@ -69,7 +69,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize3",
                 "optimize_chromatic_correction": true
             }
@@ -82,7 +82,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize4",
                 "optimize_chromatic_correction": true
             }
@@ -95,7 +95,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize5",
                 "optimize_chromatic_correction": true
             }
@@ -108,7 +108,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize6",
                 "optimize_chromatic_correction": true
             }
@@ -121,7 +121,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize7",
                 "optimize_chromatic_correction": true
             }
@@ -134,7 +134,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize8",
                 "optimize_chromatic_correction": true
             }
@@ -147,7 +147,7 @@
                 "preprocess_task": "DeconvolutionPreprocess",
                 "warp_task": "FiducialCorrelationWarp",
                 "area_threshold": 4,
-                "fov_per_iteration": 50,
+                "fov_per_iteration": 10,
                 "previous_iteration": "Optimize9",
                 "optimize_chromatic_correction": true
             }
