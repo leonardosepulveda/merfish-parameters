@@ -228,17 +228,6 @@
             }
         }, 
         {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes01",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes01",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
-        {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",
             "analysis_name": "PartitionBarcodes01",
@@ -266,17 +255,6 @@
                 "adaptive_task": "GenerateAdaptiveThreshold"
             }
         }, 
-        {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes005",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes005",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
         {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",
@@ -306,17 +284,6 @@
             }
         }, 
         {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes004",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes004",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
-        {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",
             "analysis_name": "PartitionBarcodes004",
@@ -344,17 +311,6 @@
                 "adaptive_task": "GenerateAdaptiveThreshold"
             }
         }, 
-        {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes003",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes003",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
         {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",
@@ -384,17 +340,6 @@
             }
         }, 
         {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes002",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes002",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
-        {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",
             "analysis_name": "PartitionBarcodes002",
@@ -423,17 +368,6 @@
             }
         }, 
         {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes001",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes001",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
-        {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",
             "analysis_name": "PartitionBarcodes001",
@@ -461,17 +395,6 @@
                 "adaptive_task": "GenerateAdaptiveThreshold"
             }
         }, 
-        {
-            "task": "ExportBarcodes",
-            "module": "merlin.analysis.exportbarcodes",
-            "analysis_name": "ExportBarcodes0005",
-            "parameters": {
-                "filter_task": "AdaptiveFilterBarcodes0005",
-                "columns": ["barcode_id", "global_x", "global_y", "global_z",
-                    "x", "y", "fov", "cell_index"],
-                "exclude_blanks": false
-            }
-        },
         {
             "task": "PartitionBarcodes",
             "module": "merlin.analysis.partition",

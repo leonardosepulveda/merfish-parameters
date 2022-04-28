@@ -1,0 +1,1000 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "SimpleGlobalAlignment",
+            "module": "merlin.analysis.globalalign"
+        },
+        {
+            "task": "FiducialCorrelationWarp",
+            "module": "merlin.analysis.warp",
+            "parameters": {
+                "write_fiducial_images": true,
+                "highpass_sigma": 10
+            }
+        },
+        {
+            "task": "DeconvolutionPreprocess",
+            "module": "merlin.analysis.preprocess",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "highpass_sigma": 3,
+                "decon_sigma": 2,
+                "decon_iterations": 20,
+                "decon_filter_size": 9 
+            }
+        },
+               {
+            "task": "MachineLearningSegment",
+            "module": "merlin.analysis.segment",
+            "analysis_name": "CellposeSegmentation",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "global_align_task": "SimpleGlobalAlignment",
+                "method": "cellpose",
+                "diameter": 50,
+                "compartment_channel_name": "DAPI", 
+                "flow_threshold": 0.5, 
+                "cellprob_threshold": 1
+            }
+        },
+        {
+            "task": "CleanCellBoundaries",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "segment_task": "CellposeSegmentation",
+                "global_align_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "CombineCleanedBoundaries",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "cleaning_task": "CleanCellBoundaries"
+            }
+        },
+        {
+            "task": "RefineCellDatabases",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "segment_task": "CellposeSegmentation",
+                "combine_cleaning_task": "CombineCleanedBoundaries"
+            }
+        },
+        {
+            "task": "ExportCellMetadata",
+            "module": "merlin.analysis.segment",
+            "parameters": {
+                "segment_task": "RefineCellDatabases"
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize1",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize2",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize1",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize3",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize2",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize4",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize3",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize5",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize4",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize6",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize5",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize7",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize6",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize8",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize7",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize9",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize8",
+                "optimize_chromatic_correction": true
+            }
+        },
+        {
+            "task": "OptimizeIteration",
+            "module": "merlin.analysis.optimize",
+            "analysis_name": "Optimize10",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "warp_task": "FiducialCorrelationWarp",
+                "area_threshold": 4,
+                "fov_per_iteration": 50,
+                "previous_iteration": "Optimize9",
+                "optimize_chromatic_correction": true
+            }
+        },
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT065",
+
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.65
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT065",
+            "parameters": {
+                "decode_task": "Decode_A1_DT065",
+                "run_after_task": "Decode_A1_DT065"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT065",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT065",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT065"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT065",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT065",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT065",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT065"
+            }
+        },
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A2_DT065",
+
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 2,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.65
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A2_DT065",
+            "parameters": {
+                "decode_task": "Decode_A2_DT065",
+                "run_after_task": "Decode_A2_DT065"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A2_DT065",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A2_DT065",
+                "adaptive_task": "GenerateAdaptiveThreshold_A2_DT065"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A2_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A2_DT065",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A2_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A2_DT065",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A2_DT065",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A2_DT065"
+            }
+        },
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A3_DT065",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 3,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.65
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A3_DT065",
+            "parameters": {
+                "decode_task": "Decode_A3_DT065",
+                "run_after_task": "Decode_A3_DT065"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A3_DT065",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A3_DT065",
+                "adaptive_task": "GenerateAdaptiveThreshold_A3_DT065"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A3_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A3_DT065",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A3_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A3_DT065",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A3_DT065",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A3_DT065"
+            }
+        },
+
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A4_DT065",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 4,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.65
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A4_DT065",
+            "parameters": {
+                "decode_task": "Decode_A4_DT065",
+                "run_after_task": "Decode_A4_DT065"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A4_DT065",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A4_DT065",
+                "adaptive_task": "GenerateAdaptiveThreshold_A4_DT065"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A4_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A4_DT065",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A4_DT065",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A4_DT065",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A4_DT065",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A4_DT065"
+            }
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT05167",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.5167
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT05167",
+            "parameters": {
+                "decode_task": "Decode_A1_DT05167",
+                "run_after_task": "Decode_A1_DT05167"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT05167",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A4_DT05167",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT05167"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT05167",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT05167",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT05167",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT05167",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT05167",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT05167"
+            }
+        },
+
+     
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT055",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.55
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT055",
+            "parameters": {
+                "decode_task": "Decode_A1_DT055",
+                "run_after_task": "Decode_A1_DT055"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT055",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT055",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT055"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT055",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT055",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT055",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT055",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT055",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT055"
+            }
+        },
+
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT0575",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.575
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT0575",
+            "parameters": {
+                "decode_task": "Decode_A1_DT0575",
+                "run_after_task": "Decode_A1_DT0575"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT0575",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT0575",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT0575"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT0575",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT0575",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT0575",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT0575",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT0575",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT0575"
+            }
+        },       
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT060",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.60
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT060",
+            "parameters": {
+                "decode_task": "Decode_A1_DT060",
+                "run_after_task": "Decode_A1_DT060"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT060",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT060",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT060"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT060",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT060",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT060",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT060",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT060",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT060"
+            }
+        },       
+
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT0625",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.625
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT0625",
+            "parameters": {
+                "decode_task": "Decode_A1_DT0625",
+                "run_after_task": "Decode_A1_DT0625"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT0625",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT0625",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT0625"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT0625",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT0625",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT0625",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT0625",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT0625",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT0625"
+            }
+        },       
+
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT0675",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.675
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT0675",
+            "parameters": {
+                "decode_task": "Decode_A1_DT0675",
+                "run_after_task": "Decode_A1_DT0675"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT0675",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT0675",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT0675"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT0675",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT0675",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT0675",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT0675",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT0675",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT0675"
+            }
+        },       
+
+
+
+
+
+
+
+        {
+            "task": "Decode",
+            "module": "merlin.analysis.decode",
+            "analysis_name": "Decode_A1_DT070",
+            "parameters": {
+                "preprocess_task": "DeconvolutionPreprocess",
+                "optimize_task": "Optimize10",
+                "global_align_task": "SimpleGlobalAlignment",
+                "minimum_area": 1,
+                "lowpass_sigma": 1,
+                "crop_width": 102,
+                "distance_threshold":0.70
+            }
+        },
+        {
+            "task": "GenerateAdaptiveThreshold",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name":"GenerateAdaptiveThreshold_A1_DT070",
+            "parameters": {
+                "decode_task": "Decode_A1_DT070",
+                "run_after_task": "Decode_A1_DT070"
+            }
+        }, 
+        {
+            "task": "AdaptiveFilterBarcodes",
+            "module": "merlin.analysis.filterbarcodes",
+            "analysis_name": "AdaptiveFilterBarcodes_A1_DT070",
+            "parameters": {
+                "misidentification_rate": 0.05,
+                "decode_task": "Decode_A1_DT070",
+                "adaptive_task": "GenerateAdaptiveThreshold_A1_DT070"
+            }
+        }, 
+        {
+            "task": "ExportBarcodes",
+            "module": "merlin.analysis.exportbarcodes",
+            "analysis_name": "ExportBarcodes_A1_DT070",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT070",
+                "columns": ["barcode_id", "global_x", "global_y", "global_z",
+                    "x", "y", "fov", "cell_index"],
+                "exclude_blanks": false
+            }
+        },
+        {
+            "task": "PartitionBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "PartitionBarcodes_A1_DT070",
+            "parameters": {
+                "filter_task": "AdaptiveFilterBarcodes_A1_DT070",
+                "assignment_task": "RefineCellDatabases",
+                "alignment_task": "SimpleGlobalAlignment"
+            }
+        },
+        {
+            "task": "ExportPartitionedBarcodes",
+            "module": "merlin.analysis.partition",
+            "analysis_name": "ExportPartitionedBarcodes_A1_DT070",
+            "parameters": {
+                "partition_task": "PartitionBarcodes_A1_DT070"
+            }
+        },       
+
+
+
+
+
+
+
+
+        {
+            "task": "SumSignal",
+            "module": "merlin.analysis.sequential",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "segment_task": "CellposeSegmentation",
+                "global_align_task": "SimpleGlobalAlignment",
+                "z_index": 3,
+                "apply_highpass": true,
+                "highpass_sigma": 3
+            }
+        },
+        {
+            "task": "ExportSumSignals",
+            "module": "merlin.analysis.sequential",
+            "parameters": {
+                "sequential_task": "SumSignal"
+            }
+        },
+    ]
+}

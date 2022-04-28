@@ -491,6 +491,25 @@
             }
         },
         {
+            "task": "SumSignal",
+            "module": "merlin.analysis.sequential",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "segment_task": "CellposeSegmentation",
+                "global_align_task": "SimpleGlobalAlignment",
+                "z_index": 3,
+                "apply_highpass": true,
+                "highpass_sigma": 3
+            }
+        },
+        {
+            "task": "ExportSumSignals",
+            "module": "merlin.analysis.sequential",
+            "parameters": {
+                "sequential_task": "SumSignal"
+            }
+        },
+        {
             "task": "SlurmReport",
             "module": "merlin.analysis.slurmreport",
             "analysis_name": "SlurmReport",
