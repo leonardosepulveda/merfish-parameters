@@ -23,7 +23,7 @@
                 "decon_filter_size": 9 
             }
         },
-               {
+        {
             "task": "MachineLearningSegment",
             "module": "merlin.analysis.segment",
             "analysis_name": "CellposeSegmentation",
@@ -196,15 +196,10 @@
                 "optimize_chromatic_correction": true
             }
         },
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
             "analysis_name": "Decode_A1_DT065",
-
             "parameters": {
                 "preprocess_task": "DeconvolutionPreprocess",
                 "optimize_task": "Optimize10",
@@ -263,17 +258,10 @@
                 "partition_task": "PartitionBarcodes_A1_DT065"
             }
         },
-
-
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
             "analysis_name": "Decode_A2_DT065",
-
             "parameters": {
                 "preprocess_task": "DeconvolutionPreprocess",
                 "optimize_task": "Optimize10",
@@ -332,12 +320,6 @@
                 "partition_task": "PartitionBarcodes_A2_DT065"
             }
         },
-
-
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -400,13 +382,6 @@
                 "partition_task": "PartitionBarcodes_A3_DT065"
             }
         },
-
-
-
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -469,32 +444,6 @@
                 "partition_task": "PartitionBarcodes_A4_DT065"
             }
         },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -524,7 +473,7 @@
             "analysis_name": "AdaptiveFilterBarcodes_A1_DT05167",
             "parameters": {
                 "misidentification_rate": 0.05,
-                "decode_task": "Decode_A4_DT05167",
+                "decode_task": "Decode_A1_DT05167",
                 "adaptive_task": "GenerateAdaptiveThreshold_A1_DT05167"
             }
         }, 
@@ -557,12 +506,6 @@
                 "partition_task": "PartitionBarcodes_A1_DT05167"
             }
         },
-
-     
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -625,13 +568,6 @@
                 "partition_task": "PartitionBarcodes_A1_DT055"
             }
         },
-
-
-
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -694,12 +630,6 @@
                 "partition_task": "PartitionBarcodes_A1_DT0575"
             }
         },       
-
-
-
-
-
-
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -732,7 +662,7 @@
                 "decode_task": "Decode_A1_DT060",
                 "adaptive_task": "GenerateAdaptiveThreshold_A1_DT060"
             }
-        }, 
+        },
         {
             "task": "ExportBarcodes",
             "module": "merlin.analysis.exportbarcodes",
@@ -761,14 +691,7 @@
             "parameters": {
                 "partition_task": "PartitionBarcodes_A1_DT060"
             }
-        },       
-
-
-
-
-
-
-
+        },
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -791,7 +714,7 @@
                 "decode_task": "Decode_A1_DT0625",
                 "run_after_task": "Decode_A1_DT0625"
             }
-        }, 
+        },
         {
             "task": "AdaptiveFilterBarcodes",
             "module": "merlin.analysis.filterbarcodes",
@@ -801,7 +724,7 @@
                 "decode_task": "Decode_A1_DT0625",
                 "adaptive_task": "GenerateAdaptiveThreshold_A1_DT0625"
             }
-        }, 
+        },
         {
             "task": "ExportBarcodes",
             "module": "merlin.analysis.exportbarcodes",
@@ -830,14 +753,7 @@
             "parameters": {
                 "partition_task": "PartitionBarcodes_A1_DT0625"
             }
-        },       
-
-
-
-
-
-
-
+        },
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -860,7 +776,7 @@
                 "decode_task": "Decode_A1_DT0675",
                 "run_after_task": "Decode_A1_DT0675"
             }
-        }, 
+        },
         {
             "task": "AdaptiveFilterBarcodes",
             "module": "merlin.analysis.filterbarcodes",
@@ -870,7 +786,7 @@
                 "decode_task": "Decode_A1_DT0675",
                 "adaptive_task": "GenerateAdaptiveThreshold_A1_DT0675"
             }
-        }, 
+        },
         {
             "task": "ExportBarcodes",
             "module": "merlin.analysis.exportbarcodes",
@@ -899,14 +815,7 @@
             "parameters": {
                 "partition_task": "PartitionBarcodes_A1_DT0675"
             }
-        },       
-
-
-
-
-
-
-
+        },
         {
             "task": "Decode",
             "module": "merlin.analysis.decode",
@@ -929,7 +838,7 @@
                 "decode_task": "Decode_A1_DT070",
                 "run_after_task": "Decode_A1_DT070"
             }
-        }, 
+        },
         {
             "task": "AdaptiveFilterBarcodes",
             "module": "merlin.analysis.filterbarcodes",
@@ -939,7 +848,7 @@
                 "decode_task": "Decode_A1_DT070",
                 "adaptive_task": "GenerateAdaptiveThreshold_A1_DT070"
             }
-        }, 
+        },
         {
             "task": "ExportBarcodes",
             "module": "merlin.analysis.exportbarcodes",
@@ -968,15 +877,7 @@
             "parameters": {
                 "partition_task": "PartitionBarcodes_A1_DT070"
             }
-        },       
-
-
-
-
-
-
-
-
+        },
         {
             "task": "SumSignal",
             "module": "merlin.analysis.sequential",
@@ -995,6 +896,6 @@
             "parameters": {
                 "sequential_task": "SumSignal"
             }
-        },
+        }
     ]
 }
