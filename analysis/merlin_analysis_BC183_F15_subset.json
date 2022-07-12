@@ -1,0 +1,27 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "SimpleGlobalAlignment",
+            "module": "merlin.analysis.globalalign"
+        },
+        {
+            "task": "FiducialCorrelationWarp",
+            "module": "merlin.analysis.warp",
+            "parameters": {
+                "write_fiducial_images": true,
+                "highpass_sigma": 10
+            }
+        },
+        {
+            "task": "DeconvolutionPreprocess",
+            "module": "merlin.analysis.preprocess",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "highpass_sigma": 3,
+                "decon_sigma": 2,
+                "decon_iterations": 20,
+                "decon_filter_size": 9 
+            }
+        }
+    ]
+}
