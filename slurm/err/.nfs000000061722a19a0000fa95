@@ -1,0 +1,464 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 1000
+Job counts:
+	count	jobs
+	20	DeconvolutionPreprocess
+	20	FiducialCorrelationWarp
+	1	FiducialCorrelationWarpDone
+	1	SimpleGlobalAlignment
+	1	all
+	43
+
+[Thu Jul  7 10:19:08 2022]
+Job 30: Running FiducialCorrelationWarp 7
+
+Submitted job 30 with external jobid 'Submitted batch job 17128608'.
+
+[Thu Jul  7 10:19:08 2022]
+Job 23: Running FiducialCorrelationWarp 0
+
+Submitted job 23 with external jobid 'Submitted batch job 17128609'.
+
+[Thu Jul  7 10:19:08 2022]
+Job 38: Running FiducialCorrelationWarp 15
+
+Submitted job 38 with external jobid 'Submitted batch job 17128610'.
+
+[Thu Jul  7 10:19:10 2022]
+Job 1: Running SimpleGlobalAlignment
+
+Submitted job 1 with external jobid 'Submitted batch job 17128611'.
+
+[Thu Jul  7 10:19:10 2022]
+Job 31: Running FiducialCorrelationWarp 8
+
+Submitted job 31 with external jobid 'Submitted batch job 17128612'.
+
+[Thu Jul  7 10:19:10 2022]
+Job 39: Running FiducialCorrelationWarp 16
+
+Submitted job 39 with external jobid 'Submitted batch job 17128613'.
+
+[Thu Jul  7 10:19:11 2022]
+Job 24: Running FiducialCorrelationWarp 1
+
+Submitted job 24 with external jobid 'Submitted batch job 17128614'.
+
+[Thu Jul  7 10:19:11 2022]
+Job 32: Running FiducialCorrelationWarp 9
+
+Submitted job 32 with external jobid 'Submitted batch job 17128615'.
+
+[Thu Jul  7 10:19:11 2022]
+Job 25: Running FiducialCorrelationWarp 2
+
+Submitted job 25 with external jobid 'Submitted batch job 17128616'.
+
+[Thu Jul  7 10:19:12 2022]
+Job 40: Running FiducialCorrelationWarp 17
+
+Submitted job 40 with external jobid 'Submitted batch job 17128617'.
+
+[Thu Jul  7 10:19:12 2022]
+Job 33: Running FiducialCorrelationWarp 10
+
+Submitted job 33 with external jobid 'Submitted batch job 17128618'.
+
+[Thu Jul  7 10:19:13 2022]
+Job 41: Running FiducialCorrelationWarp 18
+
+Submitted job 41 with external jobid 'Submitted batch job 17128620'.
+
+[Thu Jul  7 10:19:14 2022]
+Job 26: Running FiducialCorrelationWarp 3
+
+Submitted job 26 with external jobid 'Submitted batch job 17128621'.
+
+[Thu Jul  7 10:19:16 2022]
+Job 34: Running FiducialCorrelationWarp 11
+
+Submitted job 34 with external jobid 'Submitted batch job 17128622'.
+
+[Thu Jul  7 10:19:17 2022]
+Job 27: Running FiducialCorrelationWarp 4
+
+Submitted job 27 with external jobid 'Submitted batch job 17128623'.
+
+[Thu Jul  7 10:19:18 2022]
+Job 42: Running FiducialCorrelationWarp 19
+
+Submitted job 42 with external jobid 'Submitted batch job 17128624'.
+
+[Thu Jul  7 10:19:19 2022]
+Job 35: Running FiducialCorrelationWarp 12
+
+Submitted job 35 with external jobid 'Submitted batch job 17128627'.
+
+[Thu Jul  7 10:19:23 2022]
+Job 28: Running FiducialCorrelationWarp 5
+
+Submitted job 28 with external jobid 'Submitted batch job 17128629'.
+
+[Thu Jul  7 10:19:23 2022]
+Job 36: Running FiducialCorrelationWarp 13
+
+Submitted job 36 with external jobid 'Submitted batch job 17128630'.
+
+[Thu Jul  7 10:19:24 2022]
+Job 29: Running FiducialCorrelationWarp 6
+
+Submitted job 29 with external jobid 'Submitted batch job 17128631'.
+
+[Thu Jul  7 10:19:25 2022]
+Job 37: Running FiducialCorrelationWarp 14
+
+Submitted job 37 with external jobid 'Submitted batch job 17128632'.
+[Thu Jul  7 10:19:48 2022]
+Finished job 1.
+1 of 43 steps (2%) done
+[Thu Jul  7 10:20:08 2022]
+Finished job 30.
+2 of 43 steps (5%) done
+[Thu Jul  7 10:20:08 2022]
+Finished job 23.
+3 of 43 steps (7%) done
+[Thu Jul  7 10:20:08 2022]
+Finished job 38.
+4 of 43 steps (9%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 31.
+5 of 43 steps (12%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 39.
+6 of 43 steps (14%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 24.
+7 of 43 steps (16%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 32.
+8 of 43 steps (19%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 25.
+9 of 43 steps (21%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 40.
+10 of 43 steps (23%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 33.
+11 of 43 steps (26%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 41.
+12 of 43 steps (28%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 26.
+13 of 43 steps (30%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 34.
+14 of 43 steps (33%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 27.
+15 of 43 steps (35%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 42.
+16 of 43 steps (37%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 35.
+17 of 43 steps (40%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 28.
+18 of 43 steps (42%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 36.
+19 of 43 steps (44%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 29.
+20 of 43 steps (47%) done
+[Thu Jul  7 10:20:28 2022]
+Finished job 37.
+21 of 43 steps (49%) done
+
+[Thu Jul  7 10:20:28 2022]
+Job 22: Checking FiducialCorrelationWarp done
+
+Submitted job 22 with external jobid 'Submitted batch job 17128663'.
+[Thu Jul  7 10:20:58 2022]
+Finished job 22.
+22 of 43 steps (51%) done
+
+[Thu Jul  7 10:20:58 2022]
+Job 15: Running DeconvolutionPreprocess 13
+
+Submitted job 15 with external jobid 'Submitted batch job 17128673'.
+
+[Thu Jul  7 10:21:00 2022]
+Job 8: Running DeconvolutionPreprocess 6
+
+Submitted job 8 with external jobid 'Submitted batch job 17128674'.
+
+[Thu Jul  7 10:21:03 2022]
+Job 16: Running DeconvolutionPreprocess 14
+
+Submitted job 16 with external jobid 'Submitted batch job 17128675'.
+
+[Thu Jul  7 10:21:03 2022]
+Job 9: Running DeconvolutionPreprocess 7
+
+Submitted job 9 with external jobid 'Submitted batch job 17128676'.
+
+[Thu Jul  7 10:21:03 2022]
+Job 2: Running DeconvolutionPreprocess 0
+
+Submitted job 2 with external jobid 'Submitted batch job 17128677'.
+
+[Thu Jul  7 10:21:05 2022]
+Job 17: Running DeconvolutionPreprocess 15
+
+Submitted job 17 with external jobid 'Submitted batch job 17128678'.
+
+[Thu Jul  7 10:21:06 2022]
+Job 10: Running DeconvolutionPreprocess 8
+
+Submitted job 10 with external jobid 'Submitted batch job 17128679'.
+
+[Thu Jul  7 10:21:08 2022]
+Job 3: Running DeconvolutionPreprocess 1
+
+Submitted job 3 with external jobid 'Submitted batch job 17128680'.
+
+[Thu Jul  7 10:21:09 2022]
+Job 18: Running DeconvolutionPreprocess 16
+
+Submitted job 18 with external jobid 'Submitted batch job 17128681'.
+
+[Thu Jul  7 10:21:09 2022]
+Job 11: Running DeconvolutionPreprocess 9
+
+Submitted job 11 with external jobid 'Submitted batch job 17128682'.
+
+[Thu Jul  7 10:21:10 2022]
+Job 4: Running DeconvolutionPreprocess 2
+
+Submitted job 4 with external jobid 'Submitted batch job 17128684'.
+
+[Thu Jul  7 10:21:10 2022]
+Job 19: Running DeconvolutionPreprocess 17
+
+Submitted job 19 with external jobid 'Submitted batch job 17128685'.
+
+[Thu Jul  7 10:21:11 2022]
+Job 12: Running DeconvolutionPreprocess 10
+
+Submitted job 12 with external jobid 'Submitted batch job 17128686'.
+
+[Thu Jul  7 10:21:11 2022]
+Job 5: Running DeconvolutionPreprocess 3
+
+Submitted job 5 with external jobid 'Submitted batch job 17128687'.
+
+[Thu Jul  7 10:21:12 2022]
+Job 20: Running DeconvolutionPreprocess 18
+
+Submitted job 20 with external jobid 'Submitted batch job 17128688'.
+
+[Thu Jul  7 10:21:13 2022]
+Job 13: Running DeconvolutionPreprocess 11
+
+Submitted job 13 with external jobid 'Submitted batch job 17128689'.
+
+[Thu Jul  7 10:21:14 2022]
+Job 6: Running DeconvolutionPreprocess 4
+
+Submitted job 6 with external jobid 'Submitted batch job 17128690'.
+
+[Thu Jul  7 10:21:14 2022]
+Job 21: Running DeconvolutionPreprocess 19
+
+Submitted job 21 with external jobid 'Submitted batch job 17128691'.
+
+[Thu Jul  7 10:21:14 2022]
+Job 14: Running DeconvolutionPreprocess 12
+
+Submitted job 14 with external jobid 'Submitted batch job 17128692'.
+
+[Thu Jul  7 10:21:14 2022]
+Job 7: Running DeconvolutionPreprocess 5
+
+Submitted job 7 with external jobid 'Submitted batch job 17128693'.
+[Thu Jul  7 10:30:49 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 16
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_14.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 14 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128675
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 16, external: Submitted batch job 17128675, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.16.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 16.
+
+[Thu Jul  7 10:30:49 2022]
+Job 16: Running DeconvolutionPreprocess 14
+
+Submitted job 16 with external jobid 'Submitted batch job 17128967'.
+[Thu Jul  7 10:31:09 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 9
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_7.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 7 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128676
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 9, external: Submitted batch job 17128676, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.9.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 9.
+
+[Thu Jul  7 10:31:09 2022]
+Job 9: Running DeconvolutionPreprocess 7
+
+Submitted job 9 with external jobid 'Submitted batch job 17128970'.
+[Thu Jul  7 10:32:09 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 8
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_6.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 6 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128674
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 8, external: Submitted batch job 17128674, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.8.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 8.
+
+[Thu Jul  7 10:32:09 2022]
+Job 8: Running DeconvolutionPreprocess 6
+
+[Thu Jul  7 10:32:09 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 14
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_12.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 12 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128692
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 14, external: Submitted batch job 17128692, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.14.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 14.
+Submitted job 8 with external jobid 'Submitted batch job 17129004'.
+
+[Thu Jul  7 10:32:10 2022]
+Job 14: Running DeconvolutionPreprocess 12
+
+Submitted job 14 with external jobid 'Submitted batch job 17129005'.
+[Thu Jul  7 10:32:19 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 15
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_13.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 13 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128673
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 15, external: Submitted batch job 17128673, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.15.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 15.
+
+[Thu Jul  7 10:32:19 2022]
+Job 15: Running DeconvolutionPreprocess 13
+
+Submitted job 15 with external jobid 'Submitted batch job 17129006'.
+[Thu Jul  7 10:32:29 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 7
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_5.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 5 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128693
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 7, external: Submitted batch job 17128693, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.7.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 7.
+
+[Thu Jul  7 10:32:29 2022]
+Job 7: Running DeconvolutionPreprocess 5
+
+Submitted job 7 with external jobid 'Submitted batch job 17129014'.
+[Thu Jul  7 10:33:10 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 5
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_3.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 3 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128687
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 5, external: Submitted batch job 17128687, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.5.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 5.
+
+[Thu Jul  7 10:33:10 2022]
+Job 5: Running DeconvolutionPreprocess 3
+
+[Thu Jul  7 10:33:10 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 20
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_18.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 18 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128688
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 20, external: Submitted batch job 17128688, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.20.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 20.
+Submitted job 5 with external jobid 'Submitted batch job 17129016'.
+
+[Thu Jul  7 10:33:11 2022]
+Job 20: Running DeconvolutionPreprocess 18
+
+Submitted job 20 with external jobid 'Submitted batch job 17129017'.
+[Thu Jul  7 10:33:20 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 13
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_11.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 11 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128689
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 13, external: Submitted batch job 17128689, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.13.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 13.
+
+[Thu Jul  7 10:33:20 2022]
+Job 13: Running DeconvolutionPreprocess 11
+
+[Thu Jul  7 10:33:20 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 21
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_19.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 19 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128691
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 21, external: Submitted batch job 17128691, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.21.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 21.
+Submitted job 13 with external jobid 'Submitted batch job 17129039'.
+
+[Thu Jul  7 10:33:22 2022]
+Job 21: Running DeconvolutionPreprocess 19
+
+Submitted job 21 with external jobid 'Submitted batch job 17129040'.
+[Thu Jul  7 10:33:40 2022]
+Error in rule DeconvolutionPreprocess:
+    jobid: 6
+    output: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/DeconvolutionPreprocess/tasks/DeconvolutionPreprocess_4.done
+    shell:
+        /n/home06/lsepulvedaduran/.conda/envs/merlin_env/bin/python3.6 -m merlin -t DeconvolutionPreprocess -e "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data" -s "/n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis" -i 4 sample_F15trial
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+    cluster_jobid: Submitted batch job 17128690
+
+Error executing rule DeconvolutionPreprocess on cluster (jobid: 6, external: Submitted batch job 17128690, jobscript: /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis/sample_F15trial/snakemake/.snakemake/tmp.rdvilpf0/snakejob.DeconvolutionPreprocess.6.sh). For error details see the cluster log and the log files of the involved rule(s).
+Trying to restart job 6.
+
+[Thu Jul  7 10:33:40 2022]
+Job 6: Running DeconvolutionPreprocess 4
+
+Submitted job 6 with external jobid 'Submitted batch job 17129042'.
+slurmstepd: error: *** JOB 17128605 ON holy7c23105 CANCELLED AT 2022-07-07T10:35:58 ***
