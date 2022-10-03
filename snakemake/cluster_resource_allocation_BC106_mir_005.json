@@ -3,7 +3,7 @@
         "account" : "zhuang_lab",
         "time" : "24:00:00",
         "n" : 1,
-        "partition" : "zhuang",
+        "partition" : "zhuang,shared",
         "mem" : 10000,
         "exclude" : "holyzhuang01",
         "out" : "~/Scratch/%j.stdout.txt",
@@ -40,7 +40,7 @@
         "mem" : 1000
     },
     "ExportBarcodes" : {
-        "mem" : 100000
+        "mem" : 180000
     },
     "ExportCellMetadata" : {
         "mem" : 20000
