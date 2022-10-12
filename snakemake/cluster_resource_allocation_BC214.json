@@ -1,0 +1,108 @@
+{
+    "__default__" : {
+        "account" : "zhuang_lab",
+        "time" : "24:00:00",
+        "n" : 1,
+        "partition" : "zhuang",
+        "mem" : 10000,
+        "exclude" : "holyzhuang01",
+        "out" : "~/Scratch/%j.stdout.txt",
+        "err" : "~/Scratch/%j.stderr.txt"
+    },
+    "AdaptiveFilterBarcodes" : {
+        "mem" : 5000
+    },
+    "AsignCellFOV" : {
+        "mem" : 2000
+    },
+    "CleanCellBoundaries" : {
+        "mem" : 5000
+    },
+    "CombineCleanedBoundaries" : {
+        "mem" : 5000
+    },
+    "mosaic_DAPI" : {
+        "mem" : 15000
+    },
+    "mosaic_polyT" : {
+        "mem" : 15000
+    },
+    "mosaic_WGA" : {
+        "mem" : 15000
+    },
+    "mosaic_bits" : {
+        "mem" : 15000
+    },
+    "Decode" : {
+        "mem" : 5000
+    },
+    "DeconvolutionPreprocess" : {
+        "mem" : 1000
+    },
+    "ExportBarcodes" : {
+        "mem" : 100000
+    },
+    "ExportCellMetadata" : {
+        "mem" : 20000
+    },
+    "ExportPartitionedBarcodes" : {
+        "mem" : 15000
+    },
+    "ExportSumSignals" : {
+        "mem" : 15000
+    },
+    "FiducialCorrelationWarp" : {
+        "mem" : 1000
+    },
+    "FilterBarcodes" : {
+        "mem" : 15000
+    },
+    "GenerateAdaptiveThreshold" : {
+        "mem" : 50000
+    },  
+    "Optimize1" : {
+        "mem" : 3000
+    },
+    "Optimize2" : {
+        "mem" : 3000
+    },
+    "Optimize3" : {
+        "mem" : 5000
+    },
+    "Optimize4" : {
+        "mem" : 5000
+    },
+    "Optimize5" : {
+        "mem" : 5000
+    },
+    "Optimize6" : {
+        "mem" : 5000
+    },
+    "Optimize7" : {
+        "mem" : 5000
+    },
+    "Optimize8" : {
+        "mem" : 5000
+    },
+    "Optimize9" : {
+        "mem" : 5000
+    },
+    "Optimize10" : {
+        "mem" : 5000
+    },
+    "PartitionBarcodes" : {
+        "mem" : 5000
+    },
+    "PlotPerformance" : {
+        "mem" : 30000
+    },
+    "RefineCellDatabases" : {
+        "mem" : 5000
+    },
+    "SumSignals" : {
+        "mem" : 3000
+    },
+    "CellposeSegmentation" : {
+        "mem" : 5000
+    }
+}

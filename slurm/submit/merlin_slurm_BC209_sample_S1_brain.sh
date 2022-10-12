@@ -5,8 +5,8 @@
 #SBATCH -t 7-00:00:00
 #SBATCH --mem 4000
 #SBATCH --open-mode=append
-#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC208_sample_S4_tumor.out
-#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC208_sample_S4_tumor.err
+#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC209_sample_S1_brain.out
+#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC209_sample_S1_brain.err
 
 date +'Starting at %R.'
 
@@ -16,17 +16,17 @@ source activate merlin_env
 module load gcc/8.2.0-fasrc01
 module load fftw
 which python
-echo BC208_sample_S4_tumor
+echo BC209_sample_S1_brain
 
-merlin -k parameters_BC208.json \
-       -a merlin_analysis_BC208_tumor.json \
-       -o data_organization_BC208.csv \
-       -p positions_BC208_sample_S4_tumor.txt \
+merlin -k parameters_BC209.json \
+       -a merlin_analysis_BC209_brain.json \
+       -o data_organization_BC209.csv \
+       -p positions_BC209_sample_S1_brain.txt \
        -c C2v6_codebook_mplx.csv \
        -m MERFISH3.json \
        -n 1000 \
        -e /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/data \
        -s /n/holyscratch01/zhuang_lab/Users/lsepulvedaduran/analysis \
-       220910_BC208_data/sample_S4_tumor
+       220914_BC209_data/sample_S1_brain
 
 date +'Finished at %R.'
