@@ -1,0 +1,107 @@
+{
+    "analysis_tasks": [
+        {
+            "task": "SimpleGlobalAlignment",
+            "module": "merlin.analysis.globalalign"
+        },
+        {
+            "task": "FiducialCorrelationWarp",
+            "module": "merlin.analysis.warp",
+            "parameters": {
+                "write_fiducial_images": false,
+                "highpass_sigma": 10
+            }
+        },
+        {
+            "task": "DeconvolutionPreprocess",
+            "module": "merlin.analysis.preprocess",
+            "parameters": {
+                "warp_task": "FiducialCorrelationWarp",
+                "highpass_sigma": 3,
+                "decon_sigma": 2,
+                "decon_iterations": 20,
+                "decon_filter_size": 9 
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_DAPI_10X",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "DAPI",
+                "microns_per_pixel": 0.65,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_DAPI_1X",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "DAPI",
+                "microns_per_pixel": 6.5,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_polyT_10X",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "polyT",
+                "microns_per_pixel": 0.65,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_polyT_1X",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "data_channels": "polyT",
+                "microns_per_pixel": 6.5,
+                "z_index": 3
+            }
+        },
+        {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bits_10X",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "microns_per_pixel": 0.65,
+                "data_channels": ["bit01","bit02","bit03","bit04",
+                                  "bit05","bit06","bit07","bit08",
+                                  "bit09","bit10","bit11","bit12",
+                                  "bit13","bit14","bit15","bit16",
+                                  "bit17","bit18","bit19","bit20"],
+                "z_index": 3
+            }
+        },
+       {
+            "task": "GenerateMosaic",
+            "module": "merlin.analysis.generatemosaic",
+            "analysis_name": "mosaic_bits_1X",
+            "parameters": {
+                "global_align_task": "SimpleGlobalAlignment",
+                "warp_task": "FiducialCorrelationWarp",
+                "microns_per_pixel": 6.5,
+                "data_channels": ["bit01","bit02","bit03","bit04",
+                                  "bit05","bit06","bit07","bit08",
+                                  "bit09","bit10","bit11","bit12",
+                                  "bit13","bit14","bit15","bit16",
+                                  "bit17","bit18","bit19","bit20"],
+                "z_index": 3
+            }
+        },
+    ]
+}
