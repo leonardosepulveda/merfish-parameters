@@ -5,8 +5,8 @@
 #SBATCH -t 7-00:00:00
 #SBATCH --mem 4000
 #SBATCH --open-mode=append
-#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC224_BC230_sample_2.out
-#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC224_BC230_sample_2.err
+#SBATCH -o /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/out/BC224_BC238_sample_1.out
+#SBATCH -e /n/home06/lsepulvedaduran/Software/merfish-parameters/slurm/err/BC224_BC238_sample_1.err
 
 date +'Starting at %R.'
 
@@ -16,17 +16,17 @@ source activate merlin_env
 module load gcc/8.2.0-fasrc01
 module load fftw
 which python
-echo BC230_BC230_sample_02_data
+echo BC238_BC238_sample_01_data
 
 merlin -k parameters_BC224.json \
        -a merlin_analysis_mosaics_mlpx_20_bits_mf4.json \
        -o data_organization_10hyb_MF4.csv \
-       -p positions_BC230_sample_02.txt \
+       -p positions_BC238_sample_01.txt \
        -c C2v6_codebook_mplx.csv \
        -m MERFISH4.json \
        -n 1000 \
        -e /n/holyscratch01/zhuang_lab/Lab/shared \
-       -s /n/holyscratch01/zhuang_lab/Lab/shared/BC230_sample_02_mosaics \
-       BC230_sample_02_data
+       -s /n/holyscratch01/zhuang_lab/Lab/shared/BC238_sample_01_mosaics \
+       BC238_sample_01_data
 
 date +'Finished at %R.'

@@ -20,7 +20,7 @@ echo BC227_BC227_sample_03_data
 
 merlin -k parameters_BC224.json \
        -a merlin_analysis_mosaics_mlpx_20_bits_mf4.json \
-       -o data_organization_BC220_02_woutseq.csv \
+       -o data_organization_10hyb_MF4.csv \
        -p positions_BC227_sample_03.txt \
        -c C2v6_codebook_mplx.csv \
        -m MERFISH4.json \

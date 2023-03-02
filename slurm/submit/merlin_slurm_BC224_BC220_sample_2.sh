@@ -20,12 +20,12 @@ echo BC220_BC220_sample_02_data
 
 merlin -k parameters_BC224.json \
        -a merlin_analysis_mosaics_mlpx_20_bits_mf4.json \
-       -o data_organization_BC220_02_woutseq.csv \
+       -o data_organization_10hyb_MF4.csv \
        -p positions_BC220_sample_02.txt \
        -c C2v6_codebook_mplx.csv \
        -m MERFISH4.json \
        -n 1000 \
-       -e /n/holyscratch01/zhuang_lab/Lab/shared \
+       -e /n/holylfs04/LABS/zhuang_lab/Lab/shared/data/ \
        -s /n/holyscratch01/zhuang_lab/Lab/shared/BC220_sample_02_mosaics \
        BC220_sample_02_data
 
